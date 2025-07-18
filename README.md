@@ -2,20 +2,20 @@
 
 A simple Python program that reverses a given string using slicing.
 
-### 📋 Features
+### Features
 
 * Takes a string as input from the user.
 * Returns the reversed string.
 * Validates against empty input.
 * Clean and modular code with a `main()` function.
 
-### 🧠 How It Works
+### How It Works
 
 1. The program defines a function `reverse_string()` that reverses the string using slicing (`[::-1]`).
 2. It then prompts the user for input.
 3. If the input is valid (not empty), it displays the reversed result.
 
-### 🚀 Usage
+### Usage
 Run the script using Python:
 python String_Reverse.py
 
@@ -285,14 +285,14 @@ Converted Temperature in other units: 212.0°F = 373.15K
 # Task - 3 : Email Validator
 This Python script validates whether a given string is a properly formatted email address.
 
-## 🔍 Features
+## Features
 - Checks for valid email structure (e.g., user@example.com)
 - Uses regular expressions to validate:
   - Presence of `@` symbol
   - Domain name (e.g., `.com`, `.org`)
   - Alphanumeric username
 
-## 🧠 How It Works
+## How It Works
 The `is_valid_email` function uses a regular expression pattern to match a valid email format:
 pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 
@@ -305,7 +305,7 @@ user@.com
 @example.com
 userexample.com
 
-▶️ Usage
+Usage
 Run the script:
 
 python email_validator.py
@@ -314,12 +314,95 @@ The program will validate and print whether the email is valid or not.
 
 ## ScreenShots
 ## Code:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140004.png?raw=true)
+![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140522.png?raw=true)
 ## Output:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140042.png?raw=true)
+![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140551.png?raw=true)
 
 ## Video:
 [Video on YouTube]()
 
-
 ### Explaination
+
+Importing Required Module
+
+import re
+re is Python’s regular expression module.
+It allows you to search, match, and manipulate strings using patterns.
+
+Email Validation Function
+
+def is_valid_email(email: str) -> bool:
+Defines a function named is_valid_email.
+It takes one argument email (expected to be a string).
+The function returns a bool (either True or False).
+
+Docstring
+    """
+    Validates whether the given string is a properly formatted email address.
+
+    Parameters:
+        email (str): The email address to validate.
+
+    Returns:
+        bool: True if valid, False otherwise.
+    """
+Describes what the function does.
+Includes documentation for the input (email) and output (True/False).
+
+Regex Pattern
+    email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+This line defines a regular expression (regex) pattern to match a valid email.
+Breakdown of the pattern:
+^: Start of string
+[a-zA-Z0-9._%+-]+: Username part (alphanumeric and special characters allowed)
+@: Must have a literal "@" symbol
+[a-zA-Z0-9.-]+: Domain name (e.g., gmail, yahoo)
+\.: A literal dot before domain extension
+[a-zA-Z]{2,}: Top-level domain (e.g., com, org, in) with at least 2 characters
+$: End of string
+
+Checking Match
+    return re.match(email_regex, email) is not None
+Uses re.match() to check if the email fits the pattern.
+Returns True if it matches, otherwise False.
+
+Main Function
+def main():
+Entry point of the program. Runs the validation process.
+
+Welcome Message
+    print("Email Validator Checker")
+Prints a heading to the user.
+
+Get User Input
+    email_input = input("Enter an email address to validate: ").strip()
+Prompts user to enter an email.
+.strip() removes any extra spaces from the beginning or end.
+
+Empty Check
+    if not email_input:
+        print("Email address cannot be empty.")
+        return
+If the input is empty (""), display a warning and exit the function early using return.
+
+Call Validator
+    if is_valid_email(email_input):
+        print(f"'{email_input}' is a valid email address.")
+Calls the is_valid_email() function.
+If it returns True, print confirmation that the email is valid.
+
+Invalid Email
+    else:
+        print(f"'{email_input}' is NOT a valid email address.")
+If the validation returns False, display an error message.
+
+Entry Point Check
+if __name__ == "__main__":
+    main()
+This ensures that main() only runs if the file is executed directly, not when imported as a module.
+Good Python practice for script structure.
+
+
+# Task - 4 : Calculator Program
+
+
