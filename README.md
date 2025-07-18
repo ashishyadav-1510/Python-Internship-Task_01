@@ -28,9 +28,9 @@ olleh
 
 ## Screenshot
 ### Code:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task1/Screenshot%202025-07-18%20135911.png?raw=true)
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task1/Screenshot%202025-07-18%20135911.png?raw=true)
 ### Output:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task1/Screenshot%202025-07-18%20135929.png?raw=true)
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task1/Screenshot%202025-07-18%20135929.png?raw=true)
 
 ## Video
 
@@ -145,9 +145,9 @@ def kelvin_to_fahrenheit(k): return (((k - 273.15) * 9/5) + 32)
 
 ## ScreenShots
 ## Code:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140004.png?raw=true)
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140004.png?raw=true)
 ## Output:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140042.png?raw=true)
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140042.png?raw=true)
 
 ## Video:
 [Video on YouTube]()
@@ -314,9 +314,9 @@ The program will validate and print whether the email is valid or not.
 
 ## ScreenShots
 ## Code:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140522.png?raw=true)
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140522.png?raw=true)
 ## Output:
-![image](https://github.com/ashishyadav-1510/Python-Internship-Task_01/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140551.png?raw=true)
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140551.png?raw=true)
 
 ## Video:
 [Video on YouTube]()
