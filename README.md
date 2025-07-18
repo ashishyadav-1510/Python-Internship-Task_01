@@ -405,4 +405,243 @@ Good Python practice for script structure.
 
 # Task - 4 : Calculator Program
 
+This project is a **simple command-line calculator** written in Python that performs basic arithmetic operations such as addition, subtraction, multiplication, division, and modulus.
 
+## Features
+- Input validation for numbers and operators
+- Supports 5 basic operations:
+  - Addition (`+`)
+  - Subtraction (`-`)
+  - Multiplication (`*`)
+  - Division (`/`)
+  - Modulus ('%')
+- Handles **division and modulus by zero**
+- User-friendly error messages
+
+## How to Run
+
+1. Make sure you have **Python 3** installed.
+2. Save the code as `calculator.py`.
+3. Run it in your terminal:
+
+python calculator.py
+
+## ScreenShots
+## Code:
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task4/Screenshot%202025-07-18%20140334.png?raw=true)
+## Output:
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task4/Screenshot%202025-07-18%20140441.png?raw=true)
+
+## Video:
+[Video on YouTube]()
+
+## Explaination
+
+def get_number(prompt):
+    """Prompt the user for a valid number."""
+Defines a function called get_number that takes a parameter prompt (a string).
+The purpose is to prompt the user to enter a valid number.
+
+    while True:
+This starts an infinite loop to repeatedly ask for input until a valid number is entered.
+
+        try:
+            return float(input(prompt))
+input(prompt) shows the message (e.g., "Enter the first number: ") and reads user input.
+float() converts the input to a floating-point number.
+If successful, the number is returned and loop stops.
+
+        except ValueError:
+            print("Invalid input! Please enter a numeric value.")
+If the user enters something that can't be converted to a float (like "abc"), a ValueError occurs.
+This block catches that error and prints a friendly message, then continues the loop.
+
+def get_operator():
+    """Prompt the user to choose a valid operator."""
+Defines a function called get_operator with no parameters.
+Prompts the user to input a valid arithmetic operator (+, -, *, /, %).
+
+    valid_operators = ['+', '-', '*', '/', '%']
+A list of allowed operators.
+
+    while True:
+Starts a loop that continues until a valid operator is entered.
+
+        op = input("Enter an operator (+, -, *, /, %): ").strip()
+Prompts the user to enter an operator.
+.strip() removes leading/trailing spaces to avoid errors from accidental spaces.
+
+        if op in valid_operators:
+            return op
+If the entered operator is one of the valid ones, return it.
+
+        else:
+            print("Invalid operator! Please choose from +, -, *, /, %.")
+If not, show an error and loop again.
+
+def calculate(num1, num2, operator):
+    """Perform the calculation based on the operator."""
+Defines a function calculate that takes two numbers and an operator, and performs the correct operation.
+
+    if operator == '+':
+        return num1 + num2
+If the operator is +, return the sum.
+
+    elif operator == '-':
+        return num1 - num2
+If the operator is -, return the difference.
+
+    elif operator == '*':
+        return num1 * num2
+If the operator is *, return the product.
+
+    elif operator == '/':
+        if num2 == 0:
+            return "Error: Division by zero!"
+        return num1 / num2
+If the operator is /, first check if num2 is 0.
+Division by zero is not allowed, so return an error string.
+Otherwise, return the quotient.
+
+    elif operator == '%':
+        if num2 == 0:
+            return "Error: Modulus by zero!"
+        return num1 % num2
+If the operator is %, do the same zero check.
+If valid, return the remainder.
+
+def main():
+    print("=== Basic Calculator ===\n")
+Main driver function.
+Prints a heading before input starts.
+
+Edit
+    num1 = get_number("Enter the first number: ")
+Calls get_number() to get and store the first number.
+
+    operator = get_operator()
+Calls get_operator() to get and store the operator.
+
+    num2 = get_number("Enter the second number: ")
+Calls get_number() again for the second number.
+
+    result = calculate(num1, num2, operator)
+Calls calculate() to compute the result based on input values and stores it in result.
+
+    print(f"\nResult: {num1} {operator} {num2} = {result}")
+Displays the result in the format: 12.0 + 3.0 = 15.0.
+
+if __name__ == "__main__":
+    main()
+This checks if the script is being run directly.
+If yes, it calls the main() function to start the program.
+
+
+
+# Task - 5 : Palindrome Checker in Python
+
+This is a simple Python command-line application that checks whether a given string is a **palindrome**. A **palindrome** is a word, phrase, or sequence that reads the same backward as forward (ignoring punctuation, spaces, and case).
+
+## Features
+
+- Ignores spaces, punctuation, and capitalization
+- Supports full phrases and sentences
+- Friendly user interface in the terminal
+- Returns a clear message indicating whether the input is a palindrome
+
+## How It Works
+
+1. The user enters a string.
+2. The string is cleaned:
+   - All non-alphanumeric characters are removed.
+   - All letters are converted to lowercase.
+3. The program checks if the cleaned string is equal to its reverse.
+4. Result is displayed to the user.
+
+## ScreenShots
+## Code:
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task5/Screenshot%202025-07-18%20140240.png?raw=true)
+## Output:
+![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task5/Screenshot%202025-07-18%20140309.png?raw=true)
+
+## Video:
+[Video on YouTube]()
+
+## Explaination
+
+Function to Check Palindrome
+def is_palindrome(text: str) -> bool:
+Defines a function called is_palindrome that:
+Takes a parameter text (a string).
+Returns a boolean (True or False).
+
+    """
+    Checks whether the given string is a palindrome.
+
+    Parameters:
+        text (str): The input string to be checked.
+
+    Returns:
+        bool: True if the string is a palindrome, False otherwise.
+    """
+This is a docstring, which documents the function.
+
+It explains:
+What the function does.
+What kind of argument it takes (text: str).
+What it returns (bool).
+
+    # Remove all non-alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in text if char.isalnum())
+This is the core preprocessing logic:
+char.lower() – converts each character to lowercase.
+char.isalnum() – includes only alphanumeric characters (letters and digits), skipping spaces, commas, symbols.
+The list comprehension goes through every character in the input string, keeps only alphanumeric ones in lowercase.
+''.join(...) – joins all these characters into a cleaned string with no spaces or symbols.
+
+Example:
+
+Input: "A man, a plan, a canal: Panama"
+Cleaned: "amanaplanacanalpanama"
+
+    # Compare the cleaned string to its reverse
+    return cleaned == cleaned[::-1]
+Checks if the cleaned string equals its reverse.
+cleaned[::-1] is Python slicing syntax to reverse a string.
+If they match → it's a palindrome → returns True.
+Otherwise → returns False.
+
+Main Function: Program Flow
+
+def main():
+Defines the main() function that contains the main logic to be executed when the script runs.
+
+    print("\n*** Palindrome Checker ***")
+Prints a title banner to the console to let the user know what the program does.
+
+    user_input = input("Enter a string: ")
+Prompts the user to type in a string.
+Stores the user's input in the variable user_input.
+
+    if is_palindrome(user_input):
+Calls the is_palindrome() function with user_input as the argument.
+If the function returns True, the condition is satisfied.
+
+        print("Entered String is Palindrome!!")
+If the input is a palindrome, print this confirmation message.
+
+    else:
+        print("Entered String is not Palindrome!!")
+If the input is not a palindrome, print this message instead.
+
+Script Entry Point
+
+if __name__ == "__main__":
+    main()
+This block ensures that the main() function only runs when the script is executed directly (not imported into another script).
+It's good Python practice for modularity and testing.
+
+Sample Execution
+*** Palindrome Checker ***
+Enter a string: Racecar
+Entered String is Palindrome!!
