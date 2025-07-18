@@ -34,7 +34,7 @@ olleh
 
 ## Video
 
-[Video]()
+[Video](https://youtu.be/FtC5IAw0ASs)
 
 
 ## Explanation
@@ -150,7 +150,7 @@ def kelvin_to_fahrenheit(k): return (((k - 273.15) * 9/5) + 32)
 ![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task2/Screenshot%202025-07-18%20140042.png?raw=true)
 
 ## Video:
-[Video on YouTube]()
+[Video on YouTube](https://youtu.be/826CB3cY7TE)
 
 
 ### Explaination
@@ -319,7 +319,7 @@ The program will validate and print whether the email is valid or not.
 ![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task3/Screenshot%202025-07-18%20140551.png?raw=true)
 
 ## Video:
-[Video on YouTube]()
+[Video on YouTube](https://youtu.be/ffLbblStnFM)
 
 ### Explaination
 
@@ -433,7 +433,7 @@ python calculator.py
 ![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task4/Screenshot%202025-07-18%20140441.png?raw=true)
 
 ## Video:
-[Video on YouTube]()
+[Video on YouTube](https://youtu.be/Cw6Mt9LLi-0)
 
 ## Explaination
 
@@ -565,7 +565,7 @@ This is a simple Python command-line application that checks whether a given str
 ![image](https://github.com/ashishyadav-1510/LEVEL-01-TASKS/blob/main/Screenshot/Task5/Screenshot%202025-07-18%20140309.png?raw=true)
 
 ## Video:
-[Video on YouTube]()
+[Video on YouTube](https://youtu.be/KkNGp57oBJo)
 
 ## Explaination
 
