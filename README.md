@@ -645,3 +645,6 @@ Sample Execution
 *** Palindrome Checker ***
 Enter a string: Racecar
 Entered String is Palindrome!!
+
+## Author
+***Ashish Yadav***
